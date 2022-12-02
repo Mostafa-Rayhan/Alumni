@@ -1,0 +1,28 @@
+{% load static %}
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+
+        <h1>DIU</h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#" >Top Alumni</a></li>
+{#            class="active"#}
+          <li><a href="{% url 'alumni_sheet' %}">Alumni Sheet</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>

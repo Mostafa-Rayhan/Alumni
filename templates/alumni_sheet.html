@@ -1,0 +1,536 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Side Navigation Bar</title>
+	<link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link href="{% static 'sylte-sheet.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+      <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-user"></i>Profile</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-address-card"></i>About</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-blog"></i>Blogs</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-address-book"></i>Contact</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-map-pin"></i>Map</a></li>
+        </ul>
+    </div>
+    <div class="main_content">
+{#        <div class="header">Welcome!! Have a nice day.</div>  #}
+
+
+        <!-- ======= Header ======= -->
+          <header id="header" class="header sticky-top d-flex align-items-center" style="background-color: #0a53be; height: 70px">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+              <a href="index.html" class="logo d-flex text-decoration-none align-items-center">
+
+                <h1>DIU</h1>
+              </a>
+
+              <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+              <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a class="text-decoration-none" href="{% url 'index' %}" >Home</a></li>
+                  <li><a class="text-decoration-none" href="#">Gallery</a></li>
+                  <li><a class="text-decoration-none" href="#" >Top Alumni</a></li>
+        {#            class="active"#}
+                  <li><a class="text-decoration-none" href="{% url 'alumni_sheet' %}">Alumni Sheet</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'about' %}">About</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'contact' %}">Contact</a></li>
+
+                </ul>
+              </nav>
+
+            </div>
+          </header>
+
+
+        <div class="info">
+            <section>
+                {% for AlumniSheet in sheet %}
+                <div class=" overflow-hidden text-center">
+                    <div class="row row-cols-6 g-3">
+
+                          <div class="col">
+                            <img src="{{ sheet.image.url }}" class="img-fluid" alt="">
+                           <div class="p-3 border bg-light">
+                                <h5>{{ sheet.name }}</h5>
+                                <h6>{{ sheet.position }}</h6>
+                                <h6>{{ sheet.organization }}</h6>
+                           </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                {% endfor %}
+            </section>
+
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/10.jpg" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+{##}
+{#              <div class="col">#}
+{#                <img src="assets/img/Top-alumni/9.JPG" class="img-fluid" alt="">#}
+{#               <div class="p-3 border bg-light">Custom column padding</div>#}
+{#              </div>#}
+
+
+
+
+
+    </div>
+</div>
+
+</body>
+</html>
