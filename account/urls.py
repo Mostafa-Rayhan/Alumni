@@ -11,4 +11,6 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('alumniSheet/', views.alumniSheet, name='alumniSheet'),
     path('alumni_sheet/', views.alumni_sheet, name='alumni_sheet'),
+    path('alumni_sheet/search/', views.search, name="search"),
+    path('alumni_sheet/<slug:alumni_name>/', views.selected_name, name="selected name"),
 ]

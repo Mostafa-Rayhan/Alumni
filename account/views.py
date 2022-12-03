@@ -40,19 +40,7 @@ def login_view(request):
                 login(request, user)
                 messages.success(request, 'You login successfully!!! ')
                 return redirect('index')
-            # elif user is not None and user.is_rider:
-            #     login(request, user)
-            #     messages.success(request, 'You login successfully!!! ')
-            #     return redirect('home')
-            #
-            # elif user is not None and user.is_driver:
-            #     login(request, user)
-            #     messages.success(request, 'You login successfully!!! ')
-            #     return redirect('home')
-            #
-            # else:
-            #     # msg= 'invalid credentials'
-            #     messages.info(request, 'Username OR Password is incorrect')
+
         else:
             # msg = 'error validating form'
             messages.info(request, 'error validating form')
@@ -78,7 +66,16 @@ def alumniSheet(request):
 def alumni_sheet(request):
     sheet = AlumniSheet.objects.all()
     context = {
-        'sheet': sheet
+        'sheets': sheet
     }
 
     return render(request, 'alumni_sheet.html', context)
+
+def selected_name(request, alumni_name):
+    selected_name = AlumniSheet.objects.get(slug=alumni_name)
+    return render(request, "single_alumni.html", {'selected_name': selected_name})
+
+def search(request):
+    alumni = request.GET['query']
+    selected_name = AlumniSheet.objects.get(name=alumni)
+    return render(request, "alumni_sheet.html", {'selected_name': selected_name})
