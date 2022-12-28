@@ -30,12 +30,12 @@
         <h2>Alumni</h2>
         <ul>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-home"></i>Home</a></li>
-            <li><a class="text-decoration-none" href="#"><i class="fas fa-user"></i>Profile</a></li>
-            <li><a class="text-decoration-none" href="#"><i class="fas fa-address-card"></i>About</a></li>
-            <li><a class="text-decoration-none" href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
-            <li><a class="text-decoration-none" href="#"><i class="fas fa-blog"></i>Blogs</a></li>
-            <li><a class="text-decoration-none" href="#"><i class="fas fa-address-book"></i>Contact</a></li>
-            <li><a class="text-decoration-none" href="#"><i class="fas fa-map-pin"></i>Map</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-star"></i>Top Rated</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-award"></i>Award</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-project-diagram"></i>Worked</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-blog"></i>Company</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-address-book"></i>Batch</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-calendar-days"></i>Years</a></li>
         </ul>
     </div>
     <div class="main_content">
@@ -59,6 +59,7 @@
                     <div class="container">
                       <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
                       <form action="{% url 'search' %}" method="GET">
+                      {% csrf_token %}
                         <input type="text" name="query" id="query" list="alumni" class="form-control"
                                placeholder="Alumni Name">
                           <datalist id="alumni">
@@ -92,23 +93,26 @@
 
 
         <div class="info">
-            <section>
-                {% for sheet in sheets %}
+
+            <div class="container">
                 <div class=" overflow-hidden text-center">
                     <div class="row row-cols-6 g-2">
-
+                        {% for sheet in sheets %}
                           <div class="col">
                               <a href="/alumni_sheet/{{ alumni.slug }}"><img src="{{ sheet.image.url }}" class="img-fluid" alt=""></a>
-                           <div class="p-3 border bg-light">
+                            <div class="p-3 border bg-light">
                                 <h5>{{ sheet.name }}</h5>
                                 <h6>{{ sheet.position }}</h6>
                                 <h6>{{ sheet.organization }}</h6>
                            </div>
-
+                        {% endfor %}
                       </div>
 
                     </div>
                   </div>
+                </div>
+
+
 {#                    <div class="row row-cols-1 row-cols-md-3 g-4">#}
 {#                  <div class="col">#}
 {#                    <div class="card h-100">#}
@@ -135,8 +139,7 @@
 {#                        </div>#}
 {#                      </div>#}
 {#                    </div>#}
-                {% endfor %}
-            </section>
+
 
 {#              <div class="col">#}
 {#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}

@@ -59,6 +59,7 @@
                     <div class="container">
                       <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
                       <form action="{% url 'search' %}" method="GET">
+                      {% csrf_token %}
                         <input type="text" name="query" id="query" list="sheet" class="form-control"
                                placeholder="Alumni Name">
                           <datalist id="sheet">
