@@ -42,3 +42,13 @@ class AlumniSheet(models.Model):
 
     def __str__(self):
         return self.name
+
+class Gallery(models.Model):
+    name = models.CharField(max_length=300)
+    img = models.ImageField(upload_to='media')
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
+    slug = models.SlugField(unique=True, null=True)
+
+    def __str__(self):
+        return self.name

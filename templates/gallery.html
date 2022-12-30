@@ -46,31 +46,31 @@
           <header id="header" class="header sticky-top d-flex align-items-center" style="background-color: #0a53be; height: 70px">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-              <a href="{% url 'home' %}" class="logo d-flex text-decoration-none align-items-center">
-                <img src="{% static './assets/img/img_1.png' %}">
-{#                <h1>DIU</h1>#}
+              <a href="index.html" class="logo d-flex text-decoration-none align-items-center">
+
+                <h1>DIU</h1>
               </a>
 
 {#                <form action="{% url 'search' %}" method="GET" class="d-flex">#}
 {#                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
 {#                    <button class="btn btn-outline-success" type="submit">Search</button>#}
 {#                </form>#}
-                <div class="search-wrap">
-                    <div class="container">
-                      <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
-                      <form action="{% url 'search' %}" method="GET">
-                      {% csrf_token %}
-                        <input type="text" name="query" id="query" list="alumni" class="form-control"
-                               placeholder="Alumni Name">
-                          <datalist id="alumni">
-                          {% for sheet in sheets %}
-                              <option value="{{ sheet.name }}"></option>
-                          {% endfor %}
-                          </datalist>
-
-                      </form>
-                    </div>
-                  </div>
+{#                <div class="search-wrap">#}
+{#                    <div class="container">#}
+{#                      <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>#}
+{#                      <form action="{% url 'search' %}" method="GET">#}
+{#                      {% csrf_token %}#}
+{#                        <input type="text" name="query" id="query" list="alumni" class="form-control"#}
+{#                               placeholder="Alumni Name">#}
+{#                          <datalist id="alumni">#}
+{#                          {% for sheet in sheets %}#}
+{#                              <option value="{{ sheet.name }}"></option>#}
+{#                          {% endfor %}#}
+{#                          </datalist>#}
+{##}
+{#                      </form>#}
+{#                    </div>#}
+{#                  </div>#}
 
 
               <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -78,7 +78,7 @@
               <nav id="navbar" class="navbar">
                 <ul>
                   <li><a class="text-decoration-none" href="{% url 'index' %}" >Home</a></li>
-                  <li><a class="text-decoration-none" href="{% url 'gallery' %}">Gallery</a></li>
+                  <li><a class="text-decoration-none" href="#">Gallery</a></li>
                   <li><a class="text-decoration-none" href="#" >Top Alumni</a></li>
         {#            class="active"#}
                   <li><a class="text-decoration-none" href="{% url 'alumni_sheet' %}">Alumni Sheet</a></li>
@@ -92,25 +92,44 @@
           </header>
 
 
-          <div class="container mt-5">
+        <div class="container mt-5">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-            {% for sheet in sheets %}
-                <div class="col">
-                      <div class="card" style="height: 450px; width: 400px">
-                          <div>
-                              <a href="/alumni_sheet/{{ alumni.slug }}"><img src="{{ sheet.image.url }}" height="330" width="400" alt=""></a>
-                          </div>
-                        <div class="card-body text-center">
-                            <h5>{{ sheet.name }}</h5>
-                            <h6>{{ sheet.position }}</h6>
-                            <h6>{{ sheet.organization }}</h6>
-                        </div>
+            {% for img_list in lists %}
+            <div class="col">
+                  <div class="card" style="height: 350px; width: 400px">
+                      <div>
+                          <a href="/gallery/{{ img_list.slug }}"><img src="{{ img_list.img.url }}" height="250" width="400" alt=""></a>
                       </div>
-                </div>
-            {% endfor %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ img_list.title }}</h5>
+                        <p class="card-text">{{ img_list.description }}</p>
+                    </div>
+                  </div>
             </div>
+            {% endfor %}
         </div>
+        </div>
+{#            <div class="col">#}
+{#                  <div class="card">#}
+{#                    <img src="{% static 'assets/img/Top-alumni/9.JPG' %}" alt="...">#}
+{#                    <div class="card-body">#}
+{#                        <h5 class="card-title">Munzereen Shahid</h5>#}
+{#                        <p class="card-text">Security Analyst, Hamburg, Germany</p>#}
+{#                      </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#            <div class="col">#}
+{#                  <div class="card">#}
+{#                    <img src="{% static 'assets/img/Top-alumni/9.JPG' %}" alt="...">#}
+{#                    <div class="card-body">#}
+{#                        <h5 class="card-title">Munzereen Shahid</h5>#}
+{#                        <p class="card-text">Security Analyst, Hamburg, Germany</p>#}
+{#                      </div>#}
+{#                  </div>#}
+{#                </div>#}
 
+{#        <div class="info">#}
+{##}
 {#            <div class="container">#}
 {#                <div class=" overflow-hidden text-center">#}
 {#                    <div class="row row-cols-6 g-2">#}
@@ -128,45 +147,6 @@
 {#                    </div>#}
 {#                  </div>#}
 {#                </div>#}
-
-
-{#                    <div class="row row-cols-1 row-cols-md-3 g-4">#}
-{#                  <div class="col">#}
-{#                    <div class="card h-100">#}
-{#                      <img src="{{ sheet.image.url }}" class="card-img-top" alt="...">#}
-{#                      <div class="card-body">#}
-{#                        <h6 class="card-title">{{ sheet.name }}</h6>#}
-{#                        <h6>{{ sheet.position }}</h6>#}
-{#                          <h6>{{ sheet.organization }}</h6>#}
-{#                      </div>#}
-{#                    </div>#}
-{#                  </div>#}
-{#                    </div>#}
-{#                    <div class="container">#}
-{#                      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">#}
-{#                        <div class="col">#}
-{#                          <div class="p-3 border bg-light">#}
-{#                              <img src="{{ sheet.image.url }}" class="img-fluid" alt="">#}
-{#                           <div class="p-3 border bg-light">#}
-{#                                <h5>{{ sheet.name }}</h5>#}
-{#                                <h6>{{ sheet.position }}</h6>#}
-{#                                <h6>{{ sheet.organization }}</h6>#}
-{#                           </div>#}
-{#                          </div>#}
-{#                        </div>#}
-{#                      </div>#}
-{#                    </div>#}
-
-
-{#              <div class="col">#}
-{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
-{#               <div class="p-3 border bg-light">Custom column padding</div>#}
-{#              </div>#}
-{##}
-
-
-
-
 
     </div>
 </div>

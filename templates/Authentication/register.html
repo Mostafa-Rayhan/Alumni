@@ -12,11 +12,6 @@
 </head>
 <body class="bg-white">
         <!-- url('/img/hero-pattern.svg') -->
-        
-    <form method="POST" action="{% url 'register' %}">
-
-        {% csrf_token %}
-
         {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -27,6 +22,12 @@
                 {% endfor %}
             </ul>
         {% endif %}
+        
+    <form method="POST" action="{% url 'register' %}">
+
+        {% csrf_token %}
+
+
 
         <div class="min-w-screen min-h-screen  flex items-center justify-center px-5 py-5">
             <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
@@ -34,7 +35,9 @@
                     <div class="hidden md:block w-1/2 bg-indigo-500 log-in">
                         <div class="flex -mx-3 ">
                             <div class="w-full px-3 mt-80">
+
                                 <button class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">SIGN IN</button>
+
                             </div>
                         </div>
                         <!-- <img src="image/top-2.jpg" class="h-full w-full" alt=""> -->
@@ -48,10 +51,10 @@
                         <div>
                             <div class="flex -mx-3">
                                 <div class="w-full px-3 mb-5">
-                                    <label for="" class="text-xs font-semibold px-1">First Name</label>
+                                    <label for="" class="text-xs font-semibold px-1">Full Name</label>
                                     <div class="flex">
                                         <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                        <input type="text" name="first_name" class="w-full -ml-10 pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter Your First Name">
+                                        <input type="text" name="first_name" class="w-full -ml-10 pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter Your Full Name">
 {#                                        {{ form.varsityEmail }}#}
                                     </div>
                                 </div>
@@ -59,10 +62,10 @@
 
                             <div class="flex -mx-3">
                                 <div class="w-full px-3 mb-5">
-                                    <label for="" class="text-xs font-semibold px-1">Last Name</label>
+                                    <label for="" class="text-xs font-semibold px-1">Linkedin Account Link</label>
                                     <div class="flex">
                                         <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                        <input type="text" name="last_name" class="w-full -ml-10 pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter Your First Name">
+                                        <input type="text" name="last_name" class="w-full -ml-10 pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="https://www.linkedin.com/in/md-arafuzzaman-7bb038182/">
 
 {#                                        {{ form.varsityId }}#}
                                     </div>

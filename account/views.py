@@ -9,7 +9,7 @@ from django.contrib import messages, auth
 # from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User, auth
 
-from .models import AlumniSheet
+from .models import AlumniSheet, Gallery
 
 
 # Create your views here.
@@ -92,7 +92,7 @@ def login_view(request):
         user = auth.authenticate(username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect('index')
+            return redirect('home')
         else:
             messages.info(request, 'Invalid Username or Password')
             return redirect('login_view')
@@ -129,11 +129,21 @@ def login_view(request):
 def index(request):
     return render(request, 'index.html')
 
+def home(request):
+    return render(request, 'home.html')
+
 def about(request):
     return render(request, 'about.html')
 
 def contact(request):
     return render(request, 'contact.html')
+
+def gallery(request):
+    img_list = Gallery.objects.all()
+    context = {
+        'lists': img_list
+    }
+    return render(request, 'gallery.html', context)
 
 def alumniSheet(request):
     return render(request, 'alumni-sheet.html')
