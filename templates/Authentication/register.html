@@ -8,7 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+      <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <style>
+        i {
+            height: 30px !important;
+            width: 30px!important;
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body class="bg-white">
         <!-- url('/img/hero-pattern.svg') -->
@@ -143,7 +154,14 @@
                                     <button type="submit" value="" class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">SIGN UP</button>
                                 </div>
                             </div>
+                            <div class="text-center">
+                                <h2>Signup with Social</h2>
+                                <i class="fa-brands fa-linkedin mt-2"></i>
+                                <i class="fa-solid fa-envelope mt-2"></i>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
