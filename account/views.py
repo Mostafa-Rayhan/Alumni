@@ -1,13 +1,13 @@
 
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-# from PIL import Image
 # from .forms import SignUpForm, LoginForm
 # from django.contrib.auth import authenticate, login, update_session_auth_hash
 # from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib import messages, auth
 # from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User, auth
+from django.contrib.auth.decorators import login_required
 
 from .models import AlumniSheet, Gallery
 
@@ -129,6 +129,7 @@ def login_view(request):
 def index(request):
     return render(request, 'index.html')
 
+@login_required
 def home(request):
     return render(request, 'home.html')
 

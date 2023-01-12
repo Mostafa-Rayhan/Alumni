@@ -156,7 +156,10 @@
                             </div>
                             <div class="text-center">
                                 <h2>Signup with Social</h2>
-                                <i class="fa-brands fa-linkedin mt-2"></i>
+                                <a href="{% url 'social:begin' 'linkedin-oauth2' %}">
+                                    <i class="fa-brands fa-linkedin mt-2"></i>
+                                </a>
+
                                 <i class="fa-solid fa-envelope mt-2"></i>
                             </div>
 
