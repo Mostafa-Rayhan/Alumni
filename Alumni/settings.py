@@ -29,8 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'social_django',   # new add
     'account',
+    'social_django',   # new add
 
 ]
 
@@ -152,6 +152,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.linkedin.LinkedinOAuth2',
+    'social_core.backends.linkedin.LinkedinOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 ]
 
@@ -164,8 +165,14 @@ LOGOUT_REDIRECT_URL = 'login'
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
-SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '773bztj2bad1eb'
-SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'kYxS0XAHiztZDgLz'
+# SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '773bztj2bad1eb'
+# SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'kYxS0XAHiztZDgLz'
+
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '86lhlhr4dpa7v6'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'bnYx3Yf6pbVHxxVL'
+
+# SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '867tscqrwn0n4q'
+# SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'v2XN9NhnZtz24ZzO'
 
 
 

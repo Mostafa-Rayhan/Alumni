@@ -11,13 +11,10 @@
       <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
     <style>
-        i {
-            height: 30px !important;
-            width: 30px!important;
+        h3 {
             font-size: 30px;
-        }
-        h2 {
-            font-size: 30px;
+            color: white;
+            text-align: center;
         }
     </style>
 </head>
@@ -46,8 +43,10 @@
                     <div class="hidden md:block w-1/2 bg-indigo-500 log-in">
                         <div class="flex -mx-3 ">
                             <div class="w-full px-3 mt-80">
-
-                                <button class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">SIGN IN</button>
+                                <a href="{% url 'login_view' %}">
+                                   <h3>SIGN IN</h3>
+                                </a>
+{#                                <button class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">SIGN IN</button>#}
 
                             </div>
                         </div>
@@ -154,14 +153,14 @@
                                     <button type="submit" value="" class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">SIGN UP</button>
                                 </div>
                             </div>
-                            <div class="text-center">
-                                <h2>Signup with Social</h2>
-                                <a href="{% url 'social:begin' 'linkedin-oauth2' %}">
-                                    <i class="fa-brands fa-linkedin mt-2"></i>
-                                </a>
-
-                                <i class="fa-solid fa-envelope mt-2"></i>
-                            </div>
+{#                            <div class="text-center">#}
+{#                                <h2>Signup with Social</h2>#}
+{#                                <a href="{% url 'social:begin' 'linkedin-oauth2' %}">#}
+{#                                    <i class="fa-brands fa-linkedin mt-2"></i>#}
+{#                                </a>#}
+{##}
+{#                                <i class="fa-solid fa-envelope mt-2"></i>#}
+{#                            </div>#}
 
                         </div>
 

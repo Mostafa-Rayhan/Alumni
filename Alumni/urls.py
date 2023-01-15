@@ -7,11 +7,11 @@ from account import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
+    # path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('', include('account.urls')),
-    path('social-auth/', include('social_django.urls', namespace='social')),
-    path('', views.home, name='home'),
+    path('social-auth/', include('social_django.urls', namespace='social'))
+    # path('', views.home, name='home'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
