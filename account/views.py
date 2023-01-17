@@ -139,6 +139,9 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def profile(request):
+    return render(request, 'profile.html')
+
 def gallery(request):
     img_list = Gallery.objects.all()
     context = {

@@ -152,7 +152,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.linkedin.LinkedinOAuth2',
-    'social_core.backends.linkedin.LinkedinOAuth2',
+    # 'social_core.backends.linkedin.LinkedinOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 ]
 
@@ -173,6 +174,9 @@ SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'bnYx3Yf6pbVHxxVL'
 
 # SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '867tscqrwn0n4q'
 # SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'v2XN9NhnZtz24ZzO'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '29198437444-uk0s10d8a302v68ef8pl859edqss2e99.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 
 
 
