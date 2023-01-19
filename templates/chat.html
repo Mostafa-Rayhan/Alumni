@@ -1,0 +1,332 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Side Navigation Bar</title>
+{#    <link rel="stylesheet" href="{% static 'chat/css/sidebar.css' %}">#}
+    <link rel="stylesheet" href="{% static 'chat/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link href="{% static 'sylte-sheet.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+      <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Alumni</h2>
+        <ul>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-star"></i>Top Rated</a></li>
+            <li><a class="text-decoration-none" href="{% url 'chat' %}"><i class="fa-regular fa-comment-dots"></i>  Chat</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-award"></i>Award</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-project-diagram"></i>Worked</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-blog"></i>Company</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-address-book"></i>Batch</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-calendar-days"></i>Years</a></li>
+        </ul>
+    </div>
+    <div class="main_content">
+{#        <div class="header">Welcome!! Have a nice day.</div>  #}
+
+
+        <!-- ======= Header ======= -->
+          <header id="header" class="header sticky-top d-flex align-items-center" style="background-color: #0a53be; height: 70px">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+              <a href="{% url 'home' %}" class="logo d-flex text-decoration-none align-items-center">
+                <img src="{% static './assets/img/img_1.png' %}">
+{#                <h1>DIU</h1>#}
+              </a>
+
+{#                <form action="{% url 'search' %}" method="GET" class="d-flex">#}
+{#                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
+{#                    <button class="btn btn-outline-success" type="submit">Search</button>#}
+{#                </form>#}
+{#                <div class="search-wrap">#}
+{#                    <div class="container">#}
+{#                      <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>#}
+{#                      <form action="{% url 'search' %}" method="GET">#}
+{#                      {% csrf_token %}#}
+{#                        <input type="text" name="query" id="query" list="alumni" class="form-control"#}
+{#                               placeholder="Alumni Name">#}
+{#                          <datalist id="alumni">#}
+{#                          {% for sheet in sheets %}#}
+{#                              <option value="{{ sheet.name }}"></option>#}
+{#                          {% endfor %}#}
+{#                          </datalist>#}
+{##}
+{#                      </form>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                <form class="d-flex" action="{% url 'search' %}" method="get">#}
+{#                    {% csrf_token %}#}
+{#                  <input class="form-control col-lg-12 me-2" type="search" name="query" id="query" list="alumni" placeholder="Search Alumni Name" aria-label="Search">#}
+{#                    <datalist id="alumni">#}
+{#                          {% for sheet in sheets %}#}
+{#                              <option value="{{ sheet.name }}"></option>#}
+{#                          {% endfor %}#}
+{#                          </datalist>#}
+{#                  <button class="btn btn-outline-success" type="submit">Search</button>#}
+{#                </form>#}
+
+
+              <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+              <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a class="text-decoration-none" href="{% url 'index' %}" >Home</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'gallery' %}">Gallery</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'topAlumni' %}" >Top Alumni</a></li>
+        {#            class="active"#}
+                  <li><a class="text-decoration-none" href="{% url 'alumni_sheet' %}">Alumni Sheet</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'about' %}">About</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'contact' %}">Contact</a></li>
+                    <!------ Nav Item - User information ------>
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="{% url 'profile' %}" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+{#                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{request.user}}</span>#}
+                            <img class="img-profile rounded-circle" style="height: 30px; width: 30px" src="{%  static 'img_1.png' %}" alt="Profile Pic">
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Activity Log
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                   </li>
+
+                </ul>
+              </nav>
+
+            </div>
+          </header>
+
+
+    <div style="min-height: 82vh">
+          <div class="container-fluid">
+
+            <div class="fsize">
+                <div class="row d-flex justify-content-lg-center">
+
+                    <!--====== Chat box ======-->
+
+                    <div class="col-12 col-lg-9 mt-3">
+                        <div class="card border-0 shadow">
+                           <div class="container" action="">
+                            <!-- left side -->
+                            <div class="row g-2">
+                                <div class="col-lg-4 col-md-6">
+                                  <div class="">
+
+                                    <div class="row mt-4">
+                                        <div class="col-8">
+                                            <h4>Messages</h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <i style="font-size: 31px; color:
+                                            #8DC63F;" class="fa-regular fa-pen-to-square"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-10 col-md-3">
+                                            <input class="form-control mt-3 bg-light" type="search" placeholder="Search" aria-label="Search">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <div class="col-3 mt-2">
+                                            <img src="{% static 'chat/Images/Ellipse 18.png' %}" height="60" width="60" alt="">
+                                        </div>
+                                        <div class="col-9 mt-3">
+                                            <h6>Cody Fisher</h6>
+                                            <p style="color: #A3A3A3; font-size: 12px">Lorem ipsum dolor sit...</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="{% static 'chat/Images/Ellipse 7.png' %}" height="60" width="60" alt="">
+                                        </div>
+                                        <div class="col-9 mt-2">
+                                            <h6>Ronald Richards</h6>
+                                            <p style="color: #A3A3A3; font-size: 12px">Lorem ipsum dolor sit...</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="{% static 'chat/Images/Ellipse 8.png' %}" height="60" width="60" alt="">
+                                        </div>
+                                        <div class="col-9 mt-2">
+                                            <h6>Wade Warren</h6>
+                                            <p style="color: #A3A3A3; font-size: 12px">Lorem ipsum dolor sit...</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="{% static 'chat/Images/Ellipse 9.png' %}" height="60" width="60" alt="">
+                                        </div>
+                                        <div class="col-9 mt-2">
+                                            <h6>Jerome Bell</h6>
+                                            <p style="color: #A3A3A3; font-size: 12px">Lorem ipsum dolor sit...</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="{% static 'chat/Images/Ellipse 10.png' %}" height="60" width="60" alt="">
+                                        </div>
+                                        <div class="col-9 mt-2">
+                                            <h6>Annette Black</h6>
+                                            <p style="color: #A3A3A3; font-size: 12px">Lorem ipsum dolor sit...</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+
+                                <div class="col-md-8">
+                                  <div class="">
+                                    <div class="row mt-4">
+                                        <div class="col-3 text-end">
+                                            <img src="{% static 'chat/Images/Ellipse 18.png' %}" height="70" width="70" alt="">
+                                        </div>
+                                        <div class="col-9 mt-2">
+                                            <h5>Cody Fisher</h5>
+                                            <p style="color: #A3A3A3; font-size: 12px">Online</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <section style="height: 437px;"></section>
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-6">
+                                        <div class=" mt-3 mb-3 d-flex position-relative">
+                                            <input type="text" class="form-control form-control-lg bg-light tmsg" placeholder="Write Message" aria-label="Email">
+                                            <div class="position-absolute end-0" style="margin-top: 10px;">
+                                                <a href="" class=" p-2">
+                                                    <img src="{% static 'chat/Images/Microphone.png' %}" alt="">
+                                                </a>
+                                                <a href="" class="ml-2 p-2">
+                                                    <img src="{% static 'chat/Images/Vector (5).png' %}" alt="">
+                                                </a>
+                                                <img src="{% static 'chat/Images/Line 4.png' %}" alt="">
+                                                <a href="" class="ml-2 p-2">
+                                                    <img src="{% static 'chat/Images/Vector (4).png' %}" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+
+
+                    </div>
+
+
+                  <!-- Right side -->
+
+                  <div class="col-12 col-lg-3 mt-3">
+                      <div class="card border-0 shadow">
+                            <div class="row p-2">
+                          <form class="form-container" action="">
+                              <section style="height: 590px;">
+                                <div class="container">
+                                  <p>John Deo</p>
+                                  <p>Custoer ID: 395771996</p>
+                                  <p>Last sign-in: 27 May 2022,</p>
+                                  <p>1:08 AM EST</p>
+                                </div>
+
+                                  <hr>
+
+                                  <section style="height: 5px;">
+
+                                  </section>
+
+                                  <div class="row">
+                                      <div class="col-12">
+                                          <div class="text-center">
+                                              <img class="" src="{% static 'chat/Images/Vector (3).png' %}" alt="">
+                                          </div>
+                                          <div >
+                                              <p style="font-size: 14px; font-weight: 500;" class="text-center mt-3">Contact our Customer Care team </p>
+                                          </div>
+                                          <div class="text-center">
+                                              <button id="sidebtn" class="btn btn-success" type="button">Contact Now</button>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                              </section>
+
+
+                          </form>
+
+
+                      </div>
+                      </div>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+
+
+
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+

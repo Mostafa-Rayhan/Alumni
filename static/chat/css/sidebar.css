@@ -1,0 +1,135 @@
+
+
+/*body{*/
+/*   background-color: #CBCBCB;*/
+/* */
+/*}*/
+
+/*.wrapper{*/
+/*  display: flex;*/
+/*  position: relative;*/
+/*  background-color: #CBCBCB;  */
+/*  !* height: 100%; *!*/
+/*  margin-bottom: 32px;*/
+/*}*/
+
+/*.wrapper .sidebar{*/
+/*  width: 250px;*/
+/*  !* height: 100%; *!*/
+/*  height: 650px;*/
+/*  padding: 30px 0px;*/
+/*  position: fixed;*/
+/*  margin: 32px;*/
+/*  background: #262626;*/
+/*  border-radius: 12px;*/
+/*}*/
+
+
+/*.wrapper .sidebar ul li{*/
+/*  padding: 15px;*/
+/*  margin-left: -32px;*/
+/*  list-style: none;*/
+
+/*}    */
+
+/*.wrapper .sidebar ul li .sidea{*/
+/*  display: block;*/
+/*  font-size: 16px;*/
+/*  line-height: 24px;*/
+/*  letter-spacing: 0.02em;*/
+/*  text-decoration: none;*/
+/*  color: #5E5E5E;*/
+/*}*/
+
+
+/*.wrapper .sidebar ul li:hover{*/
+/*  background-color: #5F5F5F;*/
+/*}*/
+/*    */
+/*.wrapper .sidebar ul li:hover .icon-pic{*/
+/*  color: #8DC63F;*/
+/*}*/
+
+/*.wrapper .sidebar ul li:hover .sidea{*/
+/*  color: #FFFFFF;*/
+/*}*/
+/* */
+
+
+/*.wrapper .main_content{*/
+/*  width: 100%;*/
+/*  margin-left: 300px;*/
+/*  margin-top: 32px;*/
+/*  margin-right: 32px;*/
+/*  */
+/*}*/
+
+/* .wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-radius: 12px;
+  border-bottom: 1px solid #e0e4e8;
+} */
+
+/*.wrapper .main_content .fsize {*/
+
+
+/*}*/
+
+.form-container {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0px 29px 110px rgba(0, 0, 0, 0.08);
+}
+
+.table-sec {
+    height: 442px;
+    /* height: 100%; */
+}
+
+.table-secn {
+  height: 490px;
+  /* height: 100%; */
+}
+
+.rightp {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+  
+
+  color: #5D5D5D;
+}
+
+#sidebtn {
+  background: #8DC63F;
+  border-radius: 21.5px;
+  color: #FFFFFF;
+  width: 140px;
+  height: 43px;
+  justify-items: center;
+  align-self: center;
+}
+
+/* chat with partner */
+
+/* .chat-container {
+  background-color: #FFFFFF;
+  padding: 20px;
+  
+  border-radius: 14px;
+  box-shadow: 0px 29px 110px rgba(0, 0, 0, 0.08);
+} */
+
+/* .cTheme[data-color='primary'] .navbar-nav > .nav-item > .nav-link.active .icon,
+.cTheme[data-color='primary'] .main-content .icon,
+.cTheme[data-color='primary'] .bg-theme {
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+} */
+
+
+
+
+

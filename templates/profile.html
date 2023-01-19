@@ -31,6 +31,7 @@
         <ul>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-home"></i>Home</a></li>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-star"></i>Top Rated</a></li>
+            <li><a class="text-decoration-none" href="{% url 'chat' %}"><i class="fa-regular fa-comment-dots"></i>  Chat</a></li>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-award"></i>Award</a></li>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-project-diagram"></i>Worked</a></li>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-blog"></i>Company</a></li>
@@ -105,14 +106,14 @@
                 <ul>
                   <li><a class="text-decoration-none" href="{% url 'index' %}" >Home</a></li>
                   <li><a class="text-decoration-none" href="{% url 'gallery' %}">Gallery</a></li>
-                  <li><a class="text-decoration-none" href="#" >Top Alumni</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'topAlumni' %}" >Top Alumni</a></li>
         {#            class="active"#}
                   <li><a class="text-decoration-none" href="{% url 'alumni_sheet' %}">Alumni Sheet</a></li>
                   <li><a class="text-decoration-none" href="{% url 'about' %}">About</a></li>
                   <li><a class="text-decoration-none" href="{% url 'contact' %}">Contact</a></li>
                     <!------ Nav Item - User information ------>
                     <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="{% url 'profile' %}" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 {#                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{request.user}}</span>#}
                             <img class="img-profile rounded-circle" style="height: 30px; width: 30px" src="{%  static 'img_1.png' %}" alt="Profile Pic">
                         </a>
@@ -160,82 +161,6 @@
                 </div>
             </div>
         </div>
-
-
-
-{#          <div class="container mt-5">#}
-{#            <div class="row row-cols-1 row-cols-md-3 g-4">#}
-{#            {% for sheet in sheets %}#}
-{#                <div class="col">#}
-{#                      <div class="card" style="height: 450px; width: 400px">#}
-{#                          <div>#}
-{#                              <a href="/alumni_sheet/{{ alumni.slug }}"><img src="{{ sheet.image.url }}" height="330" width="400" alt=""></a>#}
-{#                          </div>#}
-{#                        <div class="card-body text-center">#}
-{#                            <h5>{{ sheet.name }}</h5>#}
-{#                            <h6>{{ sheet.position }}</h6>#}
-{#                            <h6>{{ sheet.organization }}</h6>#}
-{#                        </div>#}
-{#                      </div>#}
-{#                </div>#}
-{#            {% endfor %}#}
-{#            </div>#}
-{#        </div>#}
-
-{#            <div class="container">#}
-{#                <div class=" overflow-hidden text-center">#}
-{#                    <div class="row row-cols-6 g-2">#}
-{#                        {% for sheet in sheets %}#}
-{#                          <div class="col">#}
-{#                              <a href="/alumni_sheet/{{ alumni.slug }}"><img src="{{ sheet.image.url }}" class="img-fluid" alt=""></a>#}
-{#                            <div class="p-3 border bg-light">#}
-{#                                <h5>{{ sheet.name }}</h5>#}
-{#                                <h6>{{ sheet.position }}</h6>#}
-{#                                <h6>{{ sheet.organization }}</h6>#}
-{#                           </div>#}
-{#                        {% endfor %}#}
-{#                      </div>#}
-{##}
-{#                    </div>#}
-{#                  </div>#}
-{#                </div>#}
-
-
-{#                    <div class="row row-cols-1 row-cols-md-3 g-4">#}
-{#                  <div class="col">#}
-{#                    <div class="card h-100">#}
-{#                      <img src="{{ sheet.image.url }}" class="card-img-top" alt="...">#}
-{#                      <div class="card-body">#}
-{#                        <h6 class="card-title">{{ sheet.name }}</h6>#}
-{#                        <h6>{{ sheet.position }}</h6>#}
-{#                          <h6>{{ sheet.organization }}</h6>#}
-{#                      </div>#}
-{#                    </div>#}
-{#                  </div>#}
-{#                    </div>#}
-{#                    <div class="container">#}
-{#                      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">#}
-{#                        <div class="col">#}
-{#                          <div class="p-3 border bg-light">#}
-{#                              <img src="{{ sheet.image.url }}" class="img-fluid" alt="">#}
-{#                           <div class="p-3 border bg-light">#}
-{#                                <h5>{{ sheet.name }}</h5>#}
-{#                                <h6>{{ sheet.position }}</h6>#}
-{#                                <h6>{{ sheet.organization }}</h6>#}
-{#                           </div>#}
-{#                          </div>#}
-{#                        </div>#}
-{#                      </div>#}
-{#                    </div>#}
-
-
-{#              <div class="col">#}
-{#                <img src="assets/img/Top-alumni/3.JPG" class="img-fluid" alt="">#}
-{#               <div class="p-3 border bg-light">Custom column padding</div>#}
-{#              </div>#}
-{##}
-
-
 
 
 

@@ -1,0 +1,262 @@
+
+
+/* ------- Navbar ------- */
+
+.navbar {
+    background: #262626;
+}
+
+.navbar span {
+    color: #FFFFFF; 
+    
+}
+
+.navbar i {
+    /* background: #8DC63F; */
+
+    font-size: 20px;
+    
+}
+
+#icn {
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+/* 
+#ipic {
+    margin-bottom: 10px;
+    margin-right: 10px;
+} */
+
+
+/* -------- Create Payment1 --------- */
+
+
+.form-container {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0px 29px 110px rgba(0, 0, 0, 0.08);
+}
+
+
+.csize {
+    /* height: 552px;
+    width: 776px; */
+    margin: 100px 572px 100px 572px;
+}
+
+.form-control .form-select {
+    width: 331px;
+    height: 75px;
+    
+    
+}
+
+.fnt {
+    font-size: 16px;
+}
+
+
+#pera {
+    font-size: 16px;
+}
+
+#had {
+    font-size: 24px;
+}
+
+
+/* -------- Create Payment2 --------- */
+
+.dsize {
+    /* height: 552px;
+    width: 776px; */
+    margin: 20px 572px 100px 572px;
+}
+
+/* -------- Create Payment3 --------- */
+
+.title {
+    background-color: #F9F9F9;
+    margin: -30px;
+    padding: 30px;
+    margin-bottom: 10px;
+    border-radius: 14px 14px 0px 0px;
+    /* position: relative; */
+}
+
+#pstl {
+    font-size: 17px;
+    color: #8DC63F;
+    margin-top: 15px;
+}
+
+.esize {
+    margin: 70px 572px 100px 572px;
+}
+
+
+/* -------- Create Payment4 --------- */
+
+.chatbox {
+    height: 865px;
+    width: 643px;
+    /* margin-left: -500px; */
+    /* margin-top: 20px; */
+}
+
+.fsize {
+
+    margin: 50px 572px 0 572px;
+}
+
+.tsm {
+    color: #5F5F5F;
+    font-size: 16px;
+    opacity: 0.5;
+    text-align: center;
+}
+
+/* Find Business Partner */
+
+.title-2 {
+    background-color: #F9F9F9;
+    margin: -13px;
+    margin-top: -30px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 14px 14px 0px 0px;
+    /* position: relative; */
+}
+
+.tsml {
+    color: #5F5F5F;
+    font-size: 10px;
+    opacity: 0.5;
+    /* text-align: center; */
+    margin-right: 5px;
+
+}
+
+.sec {
+    height: 415px;
+}
+
+#icnp {   
+    margin-right: 5px;
+
+}
+
+#icnp1{
+    margin-top: 17px;
+    color: gray;
+
+}
+
+#icnp2{
+    color: #FFFFFF;
+}
+
+/* -------- User Payment 1 --------- */
+
+.hstyle {
+    font-size: 14px;
+    color: #5F5F5F;
+}
+
+/* -------- User Payment 1 --------- */
+
+.line {
+    max-width: 430px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+.line:before {
+    content: "";
+    width: 185px;
+    height: 1px;
+    display: block;
+    border: 0.5px solid #5F5F5F;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.line:after {
+    content: "";
+    width: 185px;
+    height: 1px;
+    display: block;
+    border: 0.5px solid #5F5F5F;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+
+/* -------- User Payment workflow --------- */
+
+
+ul {
+    list-style: none;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu ul {
+    padding-left: 50%;
+    position: relative;
+}
+
+.menu ul::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: calc(100% - 98px);
+    left: 40px;
+    top: 0;
+    background: #3742da;
+    z-index: -1;
+    margin-top: 200px;
+
+}
+
+.menu ul li {
+    padding: 35px 0;
+    padding-left: 20px;
+}
+
+.menu ul li p {
+    position: relative;
+    /* margin-top: 18px; */
+    
+}
+
+.menu ul li p::before {
+    content: "";
+    position: absolute;
+    background: #F9F9F9;
+    width: 48px;
+    height: 48px;
+    left: -350px;
+    top: 50%;
+    margin-top: 140px;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    border: 1px solid #8DC63F;
+    
+}

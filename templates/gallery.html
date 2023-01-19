@@ -31,6 +31,7 @@
         <ul>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-home"></i>Home</a></li>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-star"></i>Top Rated</a></li>
+            <li><a class="text-decoration-none" href="{% url 'chat' %}"><i class="fa-regular fa-comment-dots"></i>  Chat</a></li>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-award"></i>Award</a></li>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-project-diagram"></i>Worked</a></li>
             <li><a class="text-decoration-none" href="#"><i class="fas fa-blog"></i>Company</a></li>
@@ -78,8 +79,8 @@
               <nav id="navbar" class="navbar">
                 <ul>
                   <li><a class="text-decoration-none" href="{% url 'index' %}" >Home</a></li>
-                  <li><a class="text-decoration-none" href="#">Gallery</a></li>
-                  <li><a class="text-decoration-none" href="#" >Top Alumni</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'gallery' %}">Gallery</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'topAlumni' %}" >Top Alumni</a></li>
         {#            class="active"#}
                   <li><a class="text-decoration-none" href="{% url 'alumni_sheet' %}">Alumni Sheet</a></li>
                   <li><a class="text-decoration-none" href="{% url 'about' %}">About</a></li>
@@ -87,7 +88,7 @@
 
                     <!------ Nav Item - User information ------>
                     <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="{% url 'profile' %}" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 {#                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{request.user}}</span>#}
                             <img class="img-profile rounded-circle" style="height: 30px; width: 30px" src="{%  static 'img_1.png' %}" alt="Profile Pic">
                         </a>

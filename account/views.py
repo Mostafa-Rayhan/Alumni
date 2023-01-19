@@ -142,12 +142,18 @@ def contact(request):
 def profile(request):
     return render(request, 'profile.html')
 
+def TopAlumni(request):
+    return render(request, 'Top-Alumni.html')
+
 def gallery(request):
     img_list = Gallery.objects.all()
     context = {
         'lists': img_list
     }
     return render(request, 'gallery.html', context)
+
+def chat(request):
+    return render(request, 'chat.html')
 
 def alumniSheet(request):
     return render(request, 'alumni-sheet.html')

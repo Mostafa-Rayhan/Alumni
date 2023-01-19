@@ -1,255 +1,239 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Side Navigation Bar</title>
+	<link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link href="{% static 'sylte-sheet.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-    <title>DIU Alumni</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-  
-    <!-- Favicons -->
-    <!-- <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-  
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
-    <!-- Template Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
-  
-    <!-- =======================================================
-    * Template Name: UpConstruction - v1.1.0
-    * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
-  </head>
-  
-  <body>
-  
-    <!-- ======= Header ======= -->
-    <header id="header" class="header d-flex align-items-center">
-      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-  
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1>DIU</h1>
-        </a>
-  
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Top Alumni</a></li>
-            <li><a href="#">Alumni Aheet</a></li>
-            <li><a href="#">About</a></li>
-            
-          </ul>
-        </nav><!-- .navbar -->
-  
-      </div>
-    </header><!-- End Header -->
+      <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
-  <main id="main">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+</head>
+<body>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
-      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-
-        <h2>Top Alumni</h2>
-  
-
-      </div>
-    </div><!-- End Breadcrumbs -->
-
-    <section id="team" class="team">
-
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card">
-                <img src="assets/img/Top-alumni/9.JPG" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Munzereen Shahid</h5>
-                  <p class="card-text">Security Analyst, Hamburg, Germany</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="assets/img/Top-alumni/9.JPG" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Munzereen Shahid</h5>
-                    <p class="card-text">Security Analyst, Hamburg, Germany</p>
-                  </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="assets/img/Top-alumni/9.JPG" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Munzereen Shahid</h5>
-                    <p class="card-text">Security Analyst, Hamburg, Germany</p>
-                  </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="assets/img/Top-alumni/9.JPG" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Munzereen Shahid</h5>
-                    <p class="card-text">Security Analyst, Hamburg, Germany</p>
-                  </div>
-              </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                  <img src="assets/img/Top-alumni/9.JPG" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Munzereen Shahid</h5>
-                    <p class="card-text">Security Analyst, Hamburg, Germany</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="assets/img/Top-alumni/9.JPG" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Munzereen Shahid</h5>
-                    <p class="card-text">Security Analyst, Hamburg, Germany</p>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-
-
-
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Alumni</h2>
+        <ul>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-star"></i>Top Rated</a></li>
+            <li><a class="text-decoration-none" href="{% url 'chat' %}"><i class="fa-regular fa-comment-dots"></i>  Chat</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-award"></i>Award</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-project-diagram"></i>Worked</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-blog"></i>Company</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-address-book"></i>Batch</a></li>
+            <li><a class="text-decoration-none" href="#"><i class="fas fa-calendar-days"></i>Years</a></li>
+        </ul>
     </div>
+    <div class="main_content">
+{#        <div class="header">Welcome!! Have a nice day.</div>  #}
 
-      
+
+        <!-- ======= Header ======= -->
+          <header id="header" class="header sticky-top d-flex align-items-center" style="background-color: #0a53be; height: 70px">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+              <a href="{% url 'home' %}" class="logo d-flex text-decoration-none align-items-center">
+                <img src="{% static './assets/img/img_1.png' %}">
+{#                <h1>DIU</h1>#}
+              </a>
+
+{#                <form action="{% url 'search' %}" method="GET" class="d-flex">#}
+{#                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
+{#                    <button class="btn btn-outline-success" type="submit">Search</button>#}
+{#                </form>#}
+{#                <div class="search-wrap">#}
+{#                    <div class="container">#}
+{#                      <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>#}
+{#                      <form action="{% url 'search' %}" method="GET">#}
+{#                      {% csrf_token %}#}
+{#                        <input type="text" name="query" id="query" list="alumni" class="form-control"#}
+{#                               placeholder="Alumni Name">#}
+{#                          <datalist id="alumni">#}
+{#                          {% for sheet in sheets %}#}
+{#                              <option value="{{ sheet.name }}"></option>#}
+{#                          {% endfor %}#}
+{#                          </datalist>#}
+{##}
+{#                      </form>#}
+{#                    </div>#}
+{#                  </div>#}
+                <form class="d-flex" action="{% url 'search' %}" method="get">
+                    {% csrf_token %}
+                  <input class="form-control col-lg-12 me-2" type="search" name="query" id="query" list="alumni" placeholder="Search Alumni Name" aria-label="Search">
+                    <datalist id="alumni">
+                          {% for sheet in sheets %}
+                              <option value="{{ sheet.name }}"></option>
+                          {% endfor %}
+                          </datalist>
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+
+              <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+              <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a class="text-decoration-none" href="{% url 'index' %}" >Home</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'gallery' %}">Gallery</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'topAlumni' %}" >Top Alumni</a></li>
+        {#            class="active"#}
+                  <li><a class="text-decoration-none" href="{% url 'alumni_sheet' %}">Alumni Sheet</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'about' %}">About</a></li>
+                  <li><a class="text-decoration-none" href="{% url 'contact' %}">Contact</a></li>
+                    <!------ Nav Item - User information ------>
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="{% url 'profile' %}" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+{#                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{request.user}}</span>#}
+                            <img class="img-profile rounded-circle" style="height: 30px; width: 30px" src="{%  static 'img_1.png' %}" alt="Profile Pic">
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Activity Log
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                   </li>
+
+                </ul>
+              </nav>
+
+            </div>
+          </header>
+
+
+{#          <div class="container mt-5">#}
+{#            <div class="row row-cols-1 row-cols-md-3 g-4">#}
+{#            {% for sheet in sheets %}#}
+{#                <div class="col">#}
+{#                      <div class="card" style="height: 450px; width: 400px">#}
+{#                          <div>#}
+{#                              <a href="/alumni_sheet/{{ alumni.slug }}"><img src="{{ sheet.image.url }}" height="330" width="400" alt=""></a>#}
+{#                          </div>#}
+{#                        <div class="card-body text-center">#}
+{#                            <h5>{{ sheet.name }}</h5>#}
+{#                            <h6>{{ sheet.position }}</h6>#}
+{#                            <h6>{{ sheet.organization }}</h6>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#            </div>#}
+{#        </div>#}
+
+       <h2 class="text-center mt-5 mb-1 display-3 fw-semibold">Top Alumni</h2>
+        <p class="text-center fs-4 mb-4">Nobody is Bothered about an institution more then its alumni.
+            <br> N. R. Narayana Murthy</p>
+    <section id="team" class="team">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="{% static 'assets/img/Top-alumni/9.JPG' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Munzereen Shahid</h5>
+                      <p class="card-text">Security Analyst, Hamburg, Germany</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="{% static 'assets/img/Top-alumni/9.JPG' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Munzereen Shahid</h5>
+                        <p class="card-text">Security Analyst, Hamburg, Germany</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="{% static 'assets/img/Top-alumni/9.JPG' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Munzereen Shahid</h5>
+                        <p class="card-text">Security Analyst, Hamburg, Germany</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="{% static 'assets/img/Top-alumni/9.JPG' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Munzereen Shahid</h5>
+                        <p class="card-text">Security Analyst, Hamburg, Germany</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <img src="{% static 'assets/img/Top-alumni/9.JPG' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Munzereen Shahid</h5>
+                        <p class="card-text">Security Analyst, Hamburg, Germany</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="{% static 'assets/img/Top-alumni/9.JPG' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Munzereen Shahid</h5>
+                        <p class="card-text">Security Analyst, Hamburg, Germany</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+
+
+
+        </div>
+
+
+
     </section>
 
 
-  </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
 
-    <div class="footer-content position-relative">
-      <div class="container">
-        <div class="row">
 
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-info">
-              <h3>UpConstruction</h3>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links d-flex mt-3">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div><!-- End footer info column-->
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
-            </ul>
-          </div><!-- End footer links column-->
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div><!-- End footer links column-->
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Hic solutasetp</h4>
-            <ul>
-              <li><a href="#">Molestiae accusamus iure</a></li>
-              <li><a href="#">Excepturi dignissimos</a></li>
-              <li><a href="#">Suscipit distinctio</a></li>
-              <li><a href="#">Dilecta</a></li>
-              <li><a href="#">Sit quas consectetur</a></li>
-            </ul>
-          </div><!-- End footer links column-->
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Nobis illum</h4>
-            <ul>
-              <li><a href="#">Ipsam</a></li>
-              <li><a href="#">Laudantium dolorum</a></li>
-              <li><a href="#">Dinera</a></li>
-              <li><a href="#">Trodelas</a></li>
-              <li><a href="#">Flexo</a></li>
-            </ul>
-          </div><!-- End footer links column-->
-
-        </div>
-      </div>
     </div>
-
-    <div class="footer-legal text-center position-relative">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Phoenix</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          Designed by <a href="">Arafzumman</a>
-        </div>
-      </div>
-    </div>
-
-  </footer>
-  <!-- End Footer -->
-
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+</div>
 
 </body>
-
 </html>
+
+
+
+
+
+
