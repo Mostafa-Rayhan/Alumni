@@ -145,21 +145,82 @@
             </div>
           </header>
 
-        <div class="container mt-5">
-            <div class="card h-100 shadow border-0">
-                <div class="row container mt-3">
-                  <div class="col-lg-6">
-                      <h4>Full name: {{ request.first_name }}</h4>
-                      <h4>Username: {{ request.user }}</h4>
-                      <h4>Varsity Email: {{ user.email }}</h4>
-                      <h4>LinkedIn ID: {{ user.last_name }}</h4>
+{#        <div class="container mt-5">#}
+{#            <div class="card h-100 shadow border-0">#}
+{#                <div class="row container mt-3">#}
+{#                  <div class="col-lg-6">#}
+{#                      <h4>Full name: {{ request.first_name }}</h4>#}
+{#                      <h4>Username: {{ request.user }}</h4>#}
+{#                      <h4>Varsity Email: {{ user.email }}</h4>#}
+{#                      <h4>LinkedIn ID: {{ user.last_name }}</h4>#}
+{##}
+{#                      <h4>Company Name: {{ AlumniSheet.organization }} </h4>#}
+{#                      <h4>Position: {{ AlumniSheet.position }}</h4>#}
+{#                  </div>#}
+{#                    <div class="col-lg-2"></div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
 
-                      <h4>Company Name: {{ AlumniSheet.organization }} </h4>
-                      <h4>Position: {{ AlumniSheet.position }}</h4>
-                  </div>
-                    <div class="col-lg-2"></div>
-                </div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col-4">
+{#                <div class="row row-cols-1 row-cols-md-3 g-4">#}
+{#                  <div class="col">#}
+                    <div class="card shadow border-0">
+                        <div class="text-center">
+                            <img src="{% static 'assets/img/team/team-3.jpg' %}" height="200" width="200" class="mt-4 rounded-circle" alt="...">
+                        </div>
+                      <div class="card-body text-center">
+                        <h5 class="card-title">{{ user.first_name }}</h5>
+                        <p class="card-text">Full Stack Web Developer</p>
+                      </div>
+                        <div class="container mb-4">
+                            <hr>
+                            <div class="row">
+                                <div class="col-4">Email:</div>
+                                <div class="col-8 text-end"><b>{{ user.email }}</b></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">Company:</div>
+                                <div class="col-8 text-end"><b>Shader Bytes</b></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">State:</div>
+                                <div class="col-8 text-end"><b>India</b></div>
+                            </div>
+                            <div class="text-center d-grid mt-2">
+                                <button type="button" class="btn btn-outline-primary btn-lg ">Primary</button>
+                            </div>
+
+                        </div>
+                    </div>
+{#                  </div>#}
+{#                </div>#}
             </div>
+
+            <div class="col-8">
+                <div class="container">
+                    <div class="card shadow border-0">
+                        <div class="container mt-3">
+                            <h3>About</h3>
+                            <p>I have done several projects in the field of Python and also worked with different programming languages. I am looking forward to working with an organization that allows me to improve my skills, knowledge, personality, and organizational goals.
+
+                                I am a Full Stack Web Developer, and I'm very passionate and dedicated to my work.
+                                I always look for challenges where I can make the most of my potential and always love. This is to achieve him. I am determined to offer the best level of honesty, efficiency, and sincerity.<br>
+
+                                Technologies: Python, Django, JavaScript, ES6, React, HTML5, CSS3, Bootstrap, MySQL, Sqlite3<br>
+
+                                Comfortable: Django, Firebase, Bootstrap5<br>
+
+                                Tools: Pycharm, VS Code, Heroku, GitHub, Netlify, Figma, Canva, Chrome Dev Tools</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+          </div>
         </div>
 
 
