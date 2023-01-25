@@ -9,7 +9,7 @@ from django.contrib import messages, auth
 from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
 
-from .models import AlumniSheet, Gallery
+from .models import AlumniSheet, Gallery, TopAlumni
 
 
 # Create your views here.
@@ -142,8 +142,12 @@ def contact(request):
 def profile(request):
     return render(request, 'profile.html')
 
-def TopAlumni(request):
-    return render(request, 'Top-Alumni.html')
+def topAlumni(request):
+    top = TopAlumni.objects.all()
+    context = {
+        'tops': top
+    }
+    return render(request, 'Top-Alumni.html', context)
 
 def gallery(request):
     img_list = Gallery.objects.all()
